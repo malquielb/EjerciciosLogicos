@@ -10,7 +10,7 @@ while (runnig)
         var pin = Console.ReadLine();
 
         if (pin == null)
-            throw new Exception("[!!] Invalid input.");
+            throw new Exception("[!!] Invalid input");
 
         var result = ValidatePin(pin);
 
@@ -40,7 +40,7 @@ string ValidatePin(string pin)
     if (digits.Count() != digits.Distinct().Count())
         return "[X] PIN is invalid (repeated digits)";
 
-    return "[OK] PIN is valid";
+    return String.Format("[OK] PIN: {0} is valid", String.Join("", digits));
 }
 
 void Exit()
@@ -51,7 +51,7 @@ void Exit()
         var response = Console.ReadLine();
 
         if (response == null)
-            throw new Exception("[!!] Invalid input.");
+            throw new Exception("[!!] Invalid input");
 
         switch (response)
         {
@@ -61,7 +61,7 @@ void Exit()
             case "n":
                 break;
             default:
-                Console.WriteLine("{0} keyword is not valid.", response);
+                Console.WriteLine("{0} keyword is not valid", response);
                 goto Start;
         }
     }
