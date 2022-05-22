@@ -19,4 +19,3 @@ Condiciones:
 I.	    La clave solo debe ser de 4 o 6 valores.
 II.	    Los valores de la clave deben ser solo números.
 III.	Los números no pueden ser repetidos.
-
